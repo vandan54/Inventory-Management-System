@@ -1,0 +1,49 @@
+.section-title {
+  margin-bottom: 30px;
+  color: #2f3e7c;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* GRID */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button */
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primary-btn {
+  background: #4a5cc5;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #3d4fb3;
+}

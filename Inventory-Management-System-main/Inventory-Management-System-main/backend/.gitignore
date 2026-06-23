@@ -1,0 +1,4 @@
+node_modules/
+.env
+status-codes.txt
+database.txt

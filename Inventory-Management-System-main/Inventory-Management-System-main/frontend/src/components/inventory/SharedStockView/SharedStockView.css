@@ -1,0 +1,132 @@
+/* The primary wrapper is now in CurrentStock.css/global styles.
+   These styles are strictly for the internal Shared component content. */
+
+.inventory-kpi-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+	background: #f9fafb;
+	border-radius: 0.75rem;
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	border: 1px solid #e5e7eb;
+}
+
+.kpi-title {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #6b7280;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.kpi-value {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #111827;
+}
+
+.kpi-card.alert-red .kpi-title svg,
+.kpi-card.alert-red .kpi-value {
+	color: #ef4444;
+}
+
+.kpi-card.alert-amber .kpi-title svg,
+.kpi-card.alert-amber .kpi-value {
+	color: #f59e0b;
+}
+
+/* Filter & Search Control Panel */
+.stock-tools-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    background: #f8fafc;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 1px solid #eef2ff;
+}
+
+.search-bar-wrapper {
+    width: 100%;
+}
+
+.full-width-search {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #dde3f5;
+    border-radius: 0.6rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    margin: 0;
+    color: #2d3a8c;
+    background-color: white;
+}
+
+.full-width-search:focus {
+    outline: none;
+    border-color: #4f63d2;
+    box-shadow: 0 0 0 3px rgba(79, 99, 210, 0.1);
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Force selects to fill grid cells nicely without extra margins */
+.filters-grid .input-group {
+    margin-top: 0 !important;
+}
+
+/* Badges */
+.track-badge {
+	padding: 0.35rem 0.75rem;
+	border-radius: 0.5rem;
+	font-size: 0.85rem;
+	font-weight: 600;
+	display: inline-block;
+}
+
+.track-badge.serial { background-color: #ede9fe; color: #6d28d9; }
+.track-badge.batch { background-color: #e0f2fe; color: #0369a1; }
+.track-badge.expiry { background-color: #fef08a; color: #854d0e; }
+.track-badge.qty { background-color: #dcfce7; color: #15803d; }
+
+.status-alert {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 0.35rem 0.75rem;
+	border-radius: 0.5rem;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.alert-danger { background-color: #fee2e2; color: #b91c1c; }
+.alert-warning { background-color: #fef3c7; color: #b45309; }
+.alert-safe { color: #10b981; }
+
+.qty-impact {
+	font-weight: 700;
+	font-size: 1rem;
+	color: #111827;
+}
+
+.qty-unit {
+	color: #6b7280;
+	font-weight: 500;
+	font-size: 0.85rem;
+	margin-left: 0.2rem;
+}

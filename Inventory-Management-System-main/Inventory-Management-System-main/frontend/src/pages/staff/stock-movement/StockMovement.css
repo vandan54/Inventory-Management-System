@@ -1,0 +1,307 @@
+/* ===== MAIN WRAPPER ===== */
+.stock-wrapper {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(79, 99, 210, 0.1);
+}
+
+/* ===== HEADER (Unified Underline) ===== */
+.stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #f0f2f9; /* Title Underline */
+    margin-bottom: 1rem;
+}
+
+.stock-title {
+    color: #2d3a8c;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+/* ===== WAREHOUSE INFO BADGE (Unified Gradient) ===== */
+.warehouse-info-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #eef1fb 0%, #e8ecf9 100%);
+    border: 1px solid #d0d7f2;
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    color: #3d4a99;
+    font-size: 0.85rem;
+    font-weight: 500;
+    flex-shrink: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.warehouse-info-name {
+    font-weight: 600;
+    color: #2d3a8c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.warehouse-info-location {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #6b7280;
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid #c5cce8;
+    flex-shrink: 0;
+}
+
+/* ===== CONTENT ===== */
+.stock-content {
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* Unified No Access Box */
+.no-access-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 1rem;
+    border: 2px dashed #e2e8f0;
+}
+
+.no-access-icon {
+    background: #fee2e2;
+    color: #ef4444;
+    padding: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-access-box h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.no-access-box p {
+    color: #64748b;
+    max-width: 400px;
+    font-size: 0.95rem;
+}
+
+/* Unified Loading */
+.stock-loading {
+    padding: 3rem;
+    text-align: center;
+    color: #6366f1;
+    font-weight: 500;
+}
+
+/* ...rest of StockMovement specific styles... */
+
+/* ===== TYPE SELECTOR (IN / OUT) ===== */
+.type-selector {
+    display: flex;
+    background: #eef1fb;
+    padding: 0.3rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+}
+
+.type-btn {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #718096;
+}
+
+.type-btn.active-in {
+    background: #38a169;
+    color: white;
+    box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3);
+}
+
+.type-btn.active-out {
+    background: #e53e3e;
+    color: white;
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+.stock-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.stock-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.stock-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.stock-form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.stock-input,
+.stock-select {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #cfd6e4;
+    border-radius: 0.7rem;
+    font-size: 0.9rem;
+    outline: none;
+    background: white;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    color: #2d3748;
+}
+
+.stock-input:focus,
+.stock-select:focus {
+    border-color: #4f63d2;
+    box-shadow: 0 0 0 3px rgba(79, 99, 210, 0.1);
+}
+
+.tracking-section {
+    background: #f0f4ff;
+    border: 1.5px dashed #b8c4e6;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+}
+
+.tracking-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4f63d2;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.batch-selection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.batch-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background: white;
+    border: 1.5px solid #dde3f0;
+    border-radius: 0.6rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.batch-item-primary {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #2d3a8c;
+}
+
+.batch-meta-tag.qty {
+    background: #ebf8ff;
+    color: #2b6cb0;
+}
+
+.batch-item-qty-input {
+    width: 85px;
+    height: 38px;
+    text-align: center;
+    border: 1.5px solid #cfd6e4;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.serial-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background: white;
+    border: 1.5px solid #dde3f0;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+.serial-item.selected {
+    border-color: #4f63d2;
+    background: #f0f4ff;
+}
+
+.btn-stock-submit {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-stock-submit.btn-in { background: #38a169; }
+.btn-stock-submit.btn-out { background: #e53e3e; }
+
+.stock-divider {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .stock-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

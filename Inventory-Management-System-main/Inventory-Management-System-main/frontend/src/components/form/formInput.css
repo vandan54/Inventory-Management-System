@@ -1,0 +1,173 @@
+/* styles/Input.css */
+.input-group {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    margin-top: 1rem;
+  }
+}
+
+.input-field {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #2d3a8c;
+  background-color: #f7f9ff;
+  border: 1px solid #dde3f5;
+  border-radius: 0.75rem;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #4f63d2;
+  box-shadow: 0 0 0 3px rgba(79, 99, 210, 0.1);
+}
+
+.input-field:disabled {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.input-field:disabled + .input-label {
+  color: #9ca3af;
+}
+
+.input-label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8a94b2;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #4f63d2;
+  background-color: #f7f9ff;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #8a94b2;
+  padding: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #4f63d2;
+}
+
+.error-message {
+  color: #dc3545;
+  position : absolute;
+  left: 6px;
+  bottom: -18px;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Select Field */
+.select-field {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%278a94b2%27 stroke-width=%272%27%3e%3cpath d=%27M6 9l6 6 6-6%27/%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 2.5rem;
+}
+
+.select-field:focus {
+    border-color: #4f63d2;
+    box-shadow: 0 0 0 3px rgba(79, 99, 210, 0.1);
+}
+
+/* Date Field */
+.date-field {
+    padding: 1rem;
+}
+
+.date-field::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    color: #8a94b2;
+}
+
+/* TextArea Field */
+.textarea-group {
+    margin-bottom: 1.5rem;
+}
+
+.textarea-field {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #2d3a8c;
+    background-color: #f7f9ff;
+    border: 1px solid #dde3f5;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.textarea-field:focus {
+    border-color: #4f63d2;
+    box-shadow: 0 0 0 3px rgba(79, 99, 210, 0.1);
+}
+
+.textarea-field:focus + .input-label,
+.textarea-field:not(:placeholder-shown) + .input-label {
+    top: -8px;
+    transform: translateY(0);
+    font-size: 0.75rem;
+    color: #4f63d2;
+    background-color: #f7f9ff;
+    padding: 0 0.25rem;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.checkbox-field {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    accent-color: #4f63d2;
+}
+
+.checkbox-label {
+    cursor: pointer;
+    color: #2d3a8c;
+    font-size: 0.95rem;
+    user-select: none;
+}
+
+.checkbox-label:hover {
+    color: #4f63d2;
+}

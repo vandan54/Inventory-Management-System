@@ -1,0 +1,89 @@
+/* Modal Overlay */
+.stock-modal-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	padding: 1rem;
+}
+
+.stock-modal-content {
+	background: white;
+	border-radius: 1rem;
+	width: 100%;
+	max-width: 650px;
+	max-height: 85vh;
+	/* Flexible height - grows with content but stops here */
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+	/* Keeps the border radius sharp */
+}
+
+.stock-modal-header {
+	padding: 1.5rem;
+	border-bottom: 1px solid #eef2ff;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-shrink: 0;
+	/* Header stays fixed at top */
+}
+
+.stock-modal-header h2 {
+	margin: 0;
+	font-size: 1.35rem;
+	color: #2d3a8c;
+	font-weight: 700;
+}
+
+.stock-modal-header p {
+	margin: 0.25rem 0 0 0;
+	color: #64748b;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.btn-close-modal {
+	background: #f1f5f9;
+	border: none;
+	color: #64748b;
+	cursor: pointer;
+	padding: 0.4rem;
+	border-radius: 0.5rem;
+	transition: all 0.2s;
+	display: flex;
+}
+
+.btn-close-modal:hover {
+	background: #fee2e2;
+	color: #ef4444;
+}
+
+.stock-modal-body {
+	padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+	overflow-y: auto;
+	/* Internal scrolling if content exceeds max-height */
+	flex-grow: 1;
+}
+
+/* Perfect alignment for the custom Table component inside the modal */
+.modal-table-container {
+	width: 100%;
+}
+
+.modal-table-container .table-wrapper {
+	box-shadow: none !important;
+	border: 1px solid #eef2ff;
+	border-radius: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+.modal-table-container .custom-table th {
+	background-color: #f8fafc;
+}

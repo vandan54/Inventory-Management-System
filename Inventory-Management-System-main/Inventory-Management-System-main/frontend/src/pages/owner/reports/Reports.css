@@ -1,0 +1,38 @@
+/* pages/owner/reports/Reports.css */
+.reports-wrapper {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(79, 99, 210, 0.1);
+}
+
+.reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    border: none !important;
+}
+
+.reports-title {
+    color: #2d3a8c;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.reports-content {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

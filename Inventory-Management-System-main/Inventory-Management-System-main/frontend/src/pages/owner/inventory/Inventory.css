@@ -1,0 +1,36 @@
+.inventory-wrapper {
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(79, 99, 210, 0.1);
+}
+
+.inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: none !important;
+}
+
+.inventory-title {
+    color: #2d3a8c;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.inventory-content {
+    padding: 0 1rem 1rem 1rem;
+    border-top: none !important;
+}
+
+.stock-loading {
+    padding: 3rem;
+    text-align: center;
+    color: #6366f1;
+    font-weight: 500;
+}
